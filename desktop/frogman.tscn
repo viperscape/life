@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://kafh4kd654qt"]
+
+[ext_resource type="PackedScene" uid="uid://dud5lai4mou1t" path="res://blender/Frogman.glb" id="1_pifvb"]
+[ext_resource type="Script" path="res://desktop/frogman.gd" id="2_cetc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0cvpg"]
+size = Vector3(1, 2.18252, 1)
+
+[node name="Frogman" instance=ExtResource("1_pifvb")]
+script = ExtResource("2_cetc1")
+
+[node name="Skeleton3D" parent="Rig" index="0"]
+bones/2/rotation = Quaternion(-0.0220896, 1.24273e-07, 5.89623e-10, 0.999756)
+bones/4/rotation = Quaternion(0.262244, 0.0596803, -0.0142365, 0.963049)
+bones/5/rotation = Quaternion(-0.122584, -0.0252949, 0.04699, 0.991022)
+bones/14/rotation = Quaternion(1.51848e-07, -0.845479, -0.534009, 6.69445e-08)
+bones/15/rotation = Quaternion(3.20784e-07, -0.630464, -0.776218, 1.21803e-07)
+bones/16/rotation = Quaternion(-0.0302842, 0.044922, -0.763891, 0.643067)
+bones/17/rotation = Quaternion(-0.0471607, 0.135683, -0.550639, 0.822291)
+bones/18/rotation = Quaternion(0.3021, 7.02523e-06, 0.0311047, 0.952769)
+bones/31/rotation = Quaternion(-0.0276904, -0.0454491, 0.789052, 0.612016)
+bones/32/rotation = Quaternion(-0.355148, 0.42445, 0.326155, 0.766378)
+bones/33/rotation = Quaternion(0.86742, -3.59465e-06, -0.0893115, 0.489495)
+bones/46/rotation = Quaternion(0.0220032, 0.452454, 0.8915, 0.00541957)
+bones/46/scale = Vector3(0.999996, 0.999993, 0.999968)
+bones/47/rotation = Quaternion(-0.742425, -3.20232e-05, 0.0998988, 0.662439)
+bones/47/scale = Vector3(0.999999, 1.00002, 0.999978)
+bones/48/rotation = Quaternion(0.503473, 0.39131, 0.166759, 0.752053)
+bones/48/scale = Vector3(0.999975, 1, 1.00001)
+bones/49/position = Vector3(-0.00193191, 0.188598, 0.00201603)
+bones/49/rotation = Quaternion(0.331402, -0.403242, 0.138667, 0.841629)
+bones/51/position = Vector3(-0.0190381, 0.184382, -0.0262429)
+bones/51/rotation = Quaternion(0.00309813, 0.256788, 0.375013, 0.890739)
+bones/53/position = Vector3(0.0192162, 0.184319, 0.0229883)
+bones/53/rotation = Quaternion(-0.265401, 0.836651, 0.30568, -0.368967)
+bones/55/rotation = Quaternion(-0.0177203, 0.134627, 0.99073, 0.00399206)
+bones/55/scale = Vector3(0.999996, 0.999997, 0.999966)
+bones/56/rotation = Quaternion(-0.426789, 4.48848e-05, -0.0574277, 0.902526)
+bones/56/scale = Vector3(0.999999, 1.00001, 0.999987)
+bones/57/rotation = Quaternion(0.639378, -0.299386, -0.249901, 0.662656)
+bones/57/scale = Vector3(0.999978, 1.00001, 1)
+bones/58/position = Vector3(0.00193039, 0.188599, 0.00201488)
+bones/58/rotation = Quaternion(0.331131, 0.403286, -0.138539, 0.841736)
+bones/60/position = Vector3(0.0190394, 0.184381, -0.0262419)
+bones/60/rotation = Quaternion(0.00298277, -0.256874, -0.374741, 0.890829)
+bones/62/position = Vector3(-0.0192161, 0.184318, 0.0229884)
+bones/62/rotation = Quaternion(0.265116, 0.836775, 0.305603, 0.368956)
+bones/64/position = Vector3(-0.20002, -0.0228551, 0.31284)
+bones/65/position = Vector3(-0.315675, -0.000606811, 0.933587)
+bones/65/rotation = Quaternion(0, 0, 1, 0)
+bones/66/position = Vector3(-0.188349, 0.30507, 1.38443)
+bones/67/position = Vector3(0.20002, -0.202587, 0.139034)
+bones/68/position = Vector3(0.439117, -0.000606762, 1.29898)
+bones/68/rotation = Quaternion(0, 0, 1, 0)
+bones/69/position = Vector3(0.612989, 0.30507, 1.79096)
+bones/70/position = Vector3(0.217167, 0.467241, 0.326676)
+bones/71/position = Vector3(-0.196083, 0.461709, 0.324669)
+
+[node name="Eyeld_L" parent="Rig/Skeleton3D" index="0"]
+transform = Transform3D(0.996802, -0.0670681, 0.0434442, 0.0686616, 0.99698, -0.0362876, -0.0408792, 0.0391544, 0.998397, 0.0610413, 1.747, 0.132085)
+bone_idx = 7
+
+[node name="Eye_L" parent="Rig/Skeleton3D" index="1"]
+transform = Transform3D(0.996802, -0.0670681, 0.0434442, 0.0686616, 0.99698, -0.0362875, -0.0408792, 0.0391542, 0.998397, 0.0619323, 1.7466, 0.150835)
+bone_idx = 9
+
+[node name="Eyelid_R" parent="Rig/Skeleton3D" index="2"]
+transform = Transform3D(0.996802, -0.0670681, 0.0434442, 0.0686616, 0.99698, -0.0362876, -0.0408792, 0.0391544, 0.998397, -0.0717389, 1.73785, 0.137531)
+bone_idx = 11
+
+[node name="Eye_R" parent="Rig/Skeleton3D" index="3"]
+transform = Transform3D(0.996802, -0.0670681, 0.0434441, 0.0686616, 0.99698, -0.0362874, -0.0408792, 0.0391541, 0.998397, -0.0710363, 1.73744, 0.156288)
+bone_idx = 13
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1.6695, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.951528, 0)
+shape = SubResource("BoxShape3D_0cvpg")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

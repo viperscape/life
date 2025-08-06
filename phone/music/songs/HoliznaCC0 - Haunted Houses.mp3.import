@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctxolr73i6sqn"
+path="res://.godot/imported/HoliznaCC0 - Haunted Houses.mp3-c5fb8e36ca9bdd0ed41bec867ee74f25.mp3str"
+
+[deps]
+
+source_file="res://phone/music/songs/HoliznaCC0 - Haunted Houses.mp3"
+dest_files=["res://.godot/imported/HoliznaCC0 - Haunted Houses.mp3-c5fb8e36ca9bdd0ed41bec867ee74f25.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

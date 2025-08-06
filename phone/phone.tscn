@@ -1,0 +1,286 @@
+[gd_scene load_steps=30 format=3 uid="uid://cr6pu8k5qjuvg"]
+
+[ext_resource type="PackedScene" uid="uid://djge3xwhfj8kj" path="res://blender/phone.glb" id="1_tcj1n"]
+[ext_resource type="Script" uid="uid://igyj7ge10ylv" path="res://phone/phone.gd" id="2_5t08u"]
+[ext_resource type="PackedScene" uid="uid://d27fkd6arm76g" path="res://phone/icon.tscn" id="2_snxe0"]
+[ext_resource type="Script" uid="uid://bai32yym6n3hj" path="res://phone/cells/cells.gd" id="3_38ijr"]
+[ext_resource type="PackedScene" uid="uid://dcqp4cns3vrd2" path="res://phone/cells/cells.tscn" id="4_6s8rk"]
+[ext_resource type="Script" uid="uid://dneidlhfqthr" path="res://phone/shooter/shooter.gd" id="4_s1tg2"]
+[ext_resource type="AudioStream" uid="uid://dn118vqaafekf" path="res://sfx/pickupCoin.wav" id="5_40wvn"]
+[ext_resource type="PackedScene" uid="uid://lj841h34iu3c" path="res://phone/shooter/shooter.tscn" id="5_aui8p"]
+[ext_resource type="AudioStream" uid="uid://o6txwra3gwhl" path="res://sfx/game over.wav" id="6_ngh68"]
+[ext_resource type="Material" uid="uid://dldxlxjdag5ak" path="res://phone/phone.tres" id="6_pm0gt"]
+[ext_resource type="PackedScene" uid="uid://dka1icewqgbu1" path="res://phone/button.tscn" id="8_lq6an"]
+[ext_resource type="Texture2D" uid="uid://bmhp6uxop710w" path="res://phone/music/paused.png" id="9_7r8td"]
+[ext_resource type="Texture2D" uid="uid://d1vopcfpjtoq7" path="res://phone/music/playing.png" id="9_27fif"]
+[ext_resource type="AudioStream" uid="uid://tk26ru4undhx" path="res://sfx/shooter get hit.wav" id="9_33267"]
+[ext_resource type="Script" uid="uid://cd405w4mt1wew" path="res://phone/music/music.gd" id="9_js4j4"]
+[ext_resource type="AudioStream" uid="uid://d10fm86cmqftx" path="res://phone/music/songs/HoliznaCC0 - April Showers.mp3" id="11_1sr34"]
+[ext_resource type="AudioStream" uid="uid://b50c8mmdrv84f" path="res://phone/music/songs/HoliznaCC0 - Busking In the SunLight.mp3" id="12_wj88i"]
+[ext_resource type="AudioStream" uid="uid://ctxolr73i6sqn" path="res://phone/music/songs/HoliznaCC0 - Haunted Houses.mp3" id="13_su34k"]
+[ext_resource type="AudioStream" uid="uid://0eddbuhvqn0a" path="res://phone/music/songs/HoliznaCC0 - Mushrooms.mp3" id="14_4i4ef"]
+[ext_resource type="AudioStream" uid="uid://dppjjdbav50lv" path="res://phone/music/songs/HoliznaCC0 - Nocturnal.mp3" id="15_prlbl"]
+[ext_resource type="AudioStream" uid="uid://cxjudb13ku1sa" path="res://phone/music/songs/HoliznaCC0 - Space!.mp3" id="16_sm8vx"]
+[ext_resource type="AudioStream" uid="uid://x2r7fbo8orkf" path="res://phone/music/songs/HoliznaCC0 - Tragedy Waiting To Happen.mp3" id="17_pen8a"]
+[ext_resource type="AudioStream" uid="uid://bhes4nm8yxqfm" path="res://phone/music/songs/HoliznaCC0 - Unwind.mp3" id="18_hrkx7"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fot4x"]
+points = PackedVector3Array(-0.922139, -0.983769, -0.922139, 0.922139, 0.983769, 0.922139, 0.9577, 0.9577, 0.9577, 0.9577, -0.9577, -0.9577, -0.9577, 0.9577, -0.9577, -0.9577, -0.9577, 0.9577, 0.9577, -0.9577, 0.9577, 0.9577, 0.9577, -0.9577, -0.9577, 0.9577, 0.9577, -0.922139, -0.922139, -0.983769, -0.983769, -0.922139, -0.922139, 0.983769, -0.922139, 0.922139, 0.922139, -0.922139, 0.983769, -0.922139, 0.922139, 0.983769, 0.922139, 0.922139, -0.983769, -0.983769, 0.922139, 0.922139, 0.922139, -0.983769, 0.922139, 0.983769, 0.922139, -0.922139, -0.922139, 0.983769, -0.922139, -0.922139, -0.922139, 0.983769, 0.922139, -0.922139, -0.983769, -0.922139, 0.922139, -0.983769, -0.983769, 0.922139, -0.922139, -0.983769, -0.922139, 0.922139, 0.922139, 0.983769, -0.922139, -0.922139, 0.983769, 0.922139, 0.983769, 0.922139, 0.922139, 0.922139, 0.922139, 0.983769, 0.983769, -0.922139, -0.922139, 0.922139, -0.983769, -0.922139, -0.922139, -0.983769, 0.922139, -0.9577, -0.9577, -0.9577)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5asve"]
+points = PackedVector3Array(-0.922139, -0.983769, -0.922139, 0.922139, 0.983769, 0.922139, 0.9577, 0.9577, 0.9577, 0.9577, -0.9577, -0.9577, -0.9577, 0.9577, -0.9577, -0.9577, -0.9577, 0.9577, 0.9577, -0.9577, 0.9577, 0.9577, 0.9577, -0.9577, -0.9577, 0.9577, 0.9577, -0.922139, -0.922139, -0.983769, -0.983769, -0.922139, -0.922139, 0.983769, -0.922139, 0.922139, 0.922139, -0.922139, 0.983769, -0.922139, 0.922139, 0.983769, 0.922139, 0.922139, -0.983769, -0.983769, 0.922139, 0.922139, 0.922139, -0.983769, 0.922139, 0.983769, 0.922139, -0.922139, -0.922139, 0.983769, -0.922139, -0.922139, -0.922139, 0.983769, 0.922139, -0.922139, -0.983769, -0.922139, 0.922139, -0.983769, -0.983769, 0.922139, -0.922139, -0.983769, -0.922139, 0.922139, 0.922139, 0.983769, -0.922139, -0.922139, 0.983769, 0.922139, 0.983769, 0.922139, 0.922139, 0.922139, 0.922139, 0.983769, 0.983769, -0.922139, -0.922139, 0.922139, -0.983769, -0.922139, -0.922139, -0.983769, 0.922139, -0.9577, -0.9577, -0.9577)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jhnty"]
+viewport_path = NodePath("Control/SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74xf8"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("9_7r8td")
+texture_filter = 0
+disable_receive_shadows = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bv6nl"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("9_27fif")
+texture_filter = 0
+disable_receive_shadows = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xa78"]
+
+[node name="phone" instance=ExtResource("1_tcj1n")]
+script = ExtResource("2_5t08u")
+
+[node name="games" type="Node3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.797)
+
+[node name="Area3D" type="Area3D" parent="games" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="games/Area3D" index="0"]
+transform = Transform3D(1.1737, 0, 0, 0, 2.37446, 0, 0, 0, 0.0922938, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_fot4x")
+
+[node name="cells" type="Node3D" parent="games" index="1"]
+visible = false
+script = ExtResource("3_38ijr")
+
+[node name="world" type="Node3D" parent="games/cells" index="0"]
+
+[node name="cells" parent="games/cells/world" index="0" instance=ExtResource("4_6s8rk")]
+
+[node name="gameover" type="Label3D" parent="games/cells" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.00418472, -0.109785)
+visible = false
+modulate = Color(0.639216, 0.309804, 0.231373, 1)
+text = "Game Over"
+font_size = 48
+outline_size = 15
+
+[node name="score" type="Label3D" parent="games/cells" index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.0975, -0.109785)
+modulate = Color(0.32549, 1, 1, 1)
+text = "0
+"
+font_size = 26
+outline_size = 4
+
+[node name="eat" type="AudioStreamPlayer" parent="games/cells" index="3"]
+stream = ExtResource("5_40wvn")
+volume_db = -16.0
+
+[node name="gameover_audio" type="AudioStreamPlayer" parent="games/cells" index="4"]
+stream = ExtResource("6_ngh68")
+
+[node name="shooter" type="Node3D" parent="games" index="2"]
+visible = false
+script = ExtResource("4_s1tg2")
+
+[node name="shooter" parent="games/shooter" index="0" instance=ExtResource("5_aui8p")]
+
+[node name="score" type="Label3D" parent="games/shooter" index="1"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.0975, -0.109785)
+modulate = Color(0.32549, 1, 1, 1)
+text = "0
+"
+font_size = 26
+outline_size = 4
+
+[node name="lives" type="Label3D" parent="games/shooter" index="2"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -2.02972, -0.109785)
+modulate = Color(0.635294, 0.996078, 0.552941, 1)
+text = "҉"
+font_size = 48
+outline_size = 4
+
+[node name="gameover" type="Label3D" parent="games/shooter" index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.00418472, -0.109785)
+visible = false
+modulate = Color(0.639216, 0.309804, 0.231373, 1)
+text = "Game Over"
+font_size = 48
+outline_size = 15
+
+[node name="shooter_get_hit" type="AudioStreamPlayer" parent="games/shooter" index="4"]
+stream = ExtResource("9_33267")
+
+[node name="gameover_audio" type="AudioStreamPlayer" parent="games/shooter" index="5"]
+stream = ExtResource("6_ngh68")
+
+[node name="backdrop" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(37.9772, 0, 0, 0, 17.1182, 0, 0, 0, 1, 0, 0, 47.109)
+visible = false
+size = Vector3(8.71379, 12.7259, 1)
+material = ExtResource("6_pm0gt")
+
+[node name="phone_2" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(1.23936, 0, 0, 0, 2.45266, 0, 0, 0, 0.0953334, 0, 2.44498, 0)
+
+[node name="screen" parent="Armature/Skeleton3D" index="1"]
+transform = Transform3D(1.1737, 0, 0, 0, 2.37446, 0, 0, 0, 0.0922938, 0, 2.44498, 0.0254122)
+
+[node name="screen" parent="Armature/Skeleton3D/screen" index="0"]
+surface_material_override/0 = ExtResource("6_pm0gt")
+
+[node name="Area3D" type="Area3D" parent="Armature/Skeleton3D/screen/screen" index="0"]
+transform = Transform3D(0.852003, 0, 0, 0, 0.421148, 0, 0, 0, 10.835, 0, 0, 7.71734)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/screen/screen/Area3D" index="0"]
+transform = Transform3D(1.1737, 0, 0, 0, 2.37446, 0, 0, 0, 0.0922938, 0, 0, -0.712263)
+shape = SubResource("ConvexPolygonShape3D_5asve")
+
+[node name="apps" type="Node3D" parent="Armature/Skeleton3D/screen/screen" index="1"]
+transform = Transform3D(0.852003, 0, 0, 0, 0.421148, 0, 0, 0, 10.835, 0, 0, -0.275341)
+
+[node name="icon" parent="Armature/Skeleton3D/screen/screen/apps" index="0" instance=ExtResource("2_snxe0")]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.514322, 1.71628, 0.121551)
+app = "cells"
+
+[node name="cells_icon" parent="Armature/Skeleton3D/screen/screen/apps/icon" index="2"]
+visible = true
+
+[node name="shooter" parent="Armature/Skeleton3D/screen/screen/apps" index="1" instance=ExtResource("2_snxe0")]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.406687, 1.71628, 0.121551)
+app = "shooter"
+
+[node name="shooter_icon" parent="Armature/Skeleton3D/screen/screen/apps/shooter" index="3"]
+visible = true
+
+[node name="music" parent="Armature/Skeleton3D/screen/screen/apps" index="2" instance=ExtResource("2_snxe0")]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, -0.514322, 0.703824, 0.121551)
+app = "music"
+
+[node name="music_icon" parent="Armature/Skeleton3D/screen/screen/apps/music" index="4"]
+visible = true
+
+[node name="ScreenViewPort" type="Sprite3D" parent="Armature/Skeleton3D/screen/screen" index="2"]
+transform = Transform3D(0.720254, 0, 0, 0, 0.333497, 0, 0, 0, 1, 0, 0, 1.03751)
+texture = SubResource("ViewportTexture_jhnty")
+
+[node name="button" parent="Armature/Skeleton3D/screen/screen" index="3" instance=ExtResource("8_lq6an")]
+transform = Transform3D(0.239487, 0, 0, 0, 0.0296361, 0, 0, 0, 1, 0, -0.961587, 1.07506)
+
+[node name="music" type="Node3D" parent="Armature/Skeleton3D/screen/screen" index="4"]
+transform = Transform3D(0.720254, 0, 0, 0, 0.333497, 0, 0, 0, 1, 0, -0.398252, 1.03751)
+script = ExtResource("9_js4j4")
+music = Array[Resource]([ExtResource("12_wj88i"), ExtResource("11_1sr34"), ExtResource("13_su34k"), ExtResource("14_4i4ef"), ExtResource("15_prlbl"), ExtResource("16_sm8vx"), ExtResource("17_pen8a"), ExtResource("18_hrkx7")])
+
+[node name="paused" type="CSGBox3D" parent="Armature/Skeleton3D/screen/screen/music" index="0"]
+transform = Transform3D(-2, 0, -8.74228e-09, 0, 0.5, 0, 1.74846e-07, 0, -0.1, 0, 0, 0.1)
+material = SubResource("StandardMaterial3D_74xf8")
+
+[node name="playing" type="CSGBox3D" parent="Armature/Skeleton3D/screen/screen/music" index="1"]
+transform = Transform3D(-2, 0, -8.74228e-09, 0, 0.5, 0, 1.74846e-07, 0, -0.1, 0, -0.0459922, 0.0999999)
+visible = false
+material = SubResource("StandardMaterial3D_bv6nl")
+
+[node name="play" type="Area3D" parent="Armature/Skeleton3D/screen/screen/music" index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/screen/screen/music/play" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_0xa78")
+
+[node name="skip_forward" type="Area3D" parent="Armature/Skeleton3D/screen/screen/music" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.592887, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/screen/screen/music/skip_forward" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_0xa78")
+
+[node name="skip_back" type="Area3D" parent="Armature/Skeleton3D/screen/screen/music" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.617235, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/screen/screen/music/skip_back" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_0xa78")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Armature/Skeleton3D/screen/screen/music" index="5"]
+volume_db = -24.0
+
+[node name="Label3D" type="Label3D" parent="Armature/Skeleton3D/screen/screen/music" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72091, 1.694)
+text = "song name"
+autowrap_mode = 2
+
+[node name="AnimationPlayer" parent="." index="3"]
+autoplay = "idle"
+
+[node name="Control" type="Control" parent="." index="4"]
+visible = false
+visibility_layer = 0
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.0
+offset_top = -300.5
+offset_right = 407.0
+offset_bottom = 300.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -279.0
+offset_right = 136.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer" index="0"]
+handle_input_locally = false
+size = Vector2i(272, 558)
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport" index="0"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 5.59477)
+projection = 1
+size = 4.5
+
+[connection signal="app_interact" from="." to="games/cells" method="_on_phone_app_interact"]
+[connection signal="app_interact" from="." to="games/shooter" method="_on_phone_app_interact"]
+[connection signal="area_entered" from="games/cells/world/cells" to="games/cells" method="_on_cells_area_entered"]
+[connection signal="area_entered" from="games/shooter/shooter" to="games/shooter" method="_on_shooter_area_entered"]
+[connection signal="input_event" from="Armature/Skeleton3D/screen/screen/Area3D" to="." method="_on_area_3d_input_event"]
+[connection signal="mouse_exited" from="Armature/Skeleton3D/screen/screen/Area3D" to="games/shooter" method="_on_area_3d_mouse_exited"]
+[connection signal="input_event" from="Armature/Skeleton3D/screen/screen/button" to="." method="_on_button_input_event"]
+[connection signal="input_event" from="Armature/Skeleton3D/screen/screen/music/play" to="Armature/Skeleton3D/screen/screen/music" method="_on_play_input_event"]
+[connection signal="input_event" from="Armature/Skeleton3D/screen/screen/music/skip_forward" to="Armature/Skeleton3D/screen/screen/music" method="_on_skip_forward_input_event"]
+[connection signal="input_event" from="Armature/Skeleton3D/screen/screen/music/skip_back" to="Armature/Skeleton3D/screen/screen/music" method="_on_skip_back_input_event"]
+
+[editable path="Armature/Skeleton3D/screen/screen/apps/icon"]
+[editable path="Armature/Skeleton3D/screen/screen/apps/shooter"]
+[editable path="Armature/Skeleton3D/screen/screen/apps/music"]

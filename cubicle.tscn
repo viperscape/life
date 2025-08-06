@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3ww7kl8bky2j"]
+
+[ext_resource type="PackedScene" uid="uid://btysrceubvjg" path="res://blender/cubicle.glb" id="1_h86sr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym6um"]
+albedo_color = Color(0.396078, 0.345098, 0.360784, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8q1pp"]
+albedo_color = Color(0.0509804, 0.117647, 0.164706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cqwf"]
+albedo_color = Color(0.529412, 0.529412, 0.529412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aiwm7"]
+albedo_color = Color(0.109804, 0.14902, 0.164706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pg24g"]
+albedo_color = Color(0.545098, 0.34902, 0.313726, 1)
+roughness = 0.8
+
+[node name="cubicle" instance=ExtResource("1_h86sr")]
+
+[node name="divider" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ym6um")
+
+[node name="divider_base" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8q1pp")
+
+[node name="splitter" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_3cqwf")
+
+[node name="splitter_base" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_aiwm7")
+
+[node name="tabletop" parent="." index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pg24g")

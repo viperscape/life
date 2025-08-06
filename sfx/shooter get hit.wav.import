@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tk26ru4undhx"
+path="res://.godot/imported/shooter get hit.wav-8963e456a51921a74fb286568d8f2209.sample"
+
+[deps]
+
+source_file="res://sfx/shooter get hit.wav"
+dest_files=["res://.godot/imported/shooter get hit.wav-8963e456a51921a74fb286568d8f2209.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

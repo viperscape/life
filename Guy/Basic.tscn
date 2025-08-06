@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6gx4bhneqesc"]
+
+[ext_resource type="PackedScene" uid="uid://blufi8s4hn2ok" path="res://Guy/Basic.glb" id="1"]
+[ext_resource type="Script" path="res://Guy/Basic.gd" id="2"]
+
+[sub_resource type="CylinderShape3D" id="1"]
+
+[node name="Basic" instance=ExtResource("1")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("2")
+
+[node name="Skeleton3D" parent="Rig" index="0"]
+bones/1/position = Vector3(-0.00462207, -1.78814e-07, -1.32414)
+bones/3/rotation = Quaternion(-0.0108537, 0.00137214, -1.48937e-05, 0.99994)
+bones/5/rotation = Quaternion(-0.0554347, -0.0232262, 0.00407882, 0.998184)
+bones/13/rotation = Quaternion(-0.159076, -0.0230883, -0.560035, 0.812725)
+bones/14/rotation = Quaternion(0.30721, 0.196772, -0.156374, 0.917851)
+bones/25/rotation = Quaternion(-0.159076, 0.0230884, 0.560035, 0.812725)
+bones/26/rotation = Quaternion(0.30721, -0.196772, 0.156374, 0.917851)
+bones/36/rotation = Quaternion(-0.758624, -0.0687087, -0.647788, 0.0118495)
+bones/37/rotation = Quaternion(0.0246524, -0.000792638, 0.0702771, 0.997223)
+bones/38/rotation = Quaternion(-0.516138, -0.544722, -0.373381, 0.545404)
+bones/40/position = Vector3(-0.0650008, 0.297455, -0.737108)
+bones/41/rotation = Quaternion(-0.87271, 0.0824465, 0.481199, 0.00523919)
+bones/42/rotation = Quaternion(0.0246524, 0.000792631, -0.0702771, 0.997223)
+bones/43/rotation = Quaternion(-0.575486, 0.416045, 0.272609, 0.649159)
+bones/45/position = Vector3(0.0677003, 0.298047, -0.734431)
+bones/46/position = Vector3(-0.149285, -1.9415, -2.18263)
+bones/47/position = Vector3(0.444738, 0.102214, -1.60651)
+bones/48/position = Vector3(0.38129, -0.00175035, -0.0732054)
+bones/49/position = Vector3(0.134044, -1.9415, -2.18362)
+bones/50/position = Vector3(-0.455942, 0.102214, -1.60336)
+bones/51/position = Vector3(-0.381791, -0.00175035, -0.0705417)
+
+[node name="Brows" parent="Rig/Skeleton3D" index="0"]
+transform = Transform3D(0.998658, -0.00504058, -0.0515401, 0.0103581, 0.994582, 0.103433, 0.0507395, -0.103828, 0.9933, 0.013756, 0.0146937, 0.277292)
+bone_idx = 6
+
+[node name="Ears" parent="Rig/Skeleton3D" index="1"]
+transform = Transform3D(0.999283, -0.00504058, 0.0375167, 0.00111443, 0.994582, 0.103944, -0.0378374, -0.103828, 0.993875, 0.133468, 1.17404, 0.218189)
+bone_idx = 7
+
+[node name="Eyes" parent="Rig/Skeleton3D" index="2"]
+transform = Transform3D(0.998658, -0.00504058, -0.0515401, 0.0103581, 0.994582, 0.103433, 0.0507395, -0.103828, 0.9933, -0.136246, 3.13099, 0.222775)
+bone_idx = 8
+
+[node name="Hat" parent="Rig/Skeleton3D" index="3"]
+transform = Transform3D(0.998658, -0.00205854, -0.0517451, 0.0103581, 0.986958, 0.160644, 0.0507395, -0.160964, 0.985655, -0.00263852, 3.34817, -0.0805339)
+bone_idx = 9
+
+[node name="Lips" parent="Rig/Skeleton3D" index="4"]
+transform = Transform3D(0.998658, -0.00504058, -0.0515401, 0.0103581, 0.994582, 0.103433, 0.0507395, -0.103828, 0.9933, 0.00139358, 1.07659, 0.303831)
+bone_idx = 10
+
+[node name="Nose" parent="Rig/Skeleton3D" index="5"]
+transform = Transform3D(0.998658, -0.00504058, -0.0515401, 0.0103581, 0.994582, 0.103433, 0.0507395, -0.103828, 0.9933, -0.0188061, 3.06212, 0.296071)
+bone_idx = 11
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Idle"
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, 1.75, 0, 0, 0, 0.5, 0, 1.69156, 0)
+shape = SubResource("1")

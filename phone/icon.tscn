@@ -1,0 +1,87 @@
+[gd_scene load_steps=14 format=3 uid="uid://d27fkd6arm76g"]
+
+[ext_resource type="PackedScene" uid="uid://jgx18tqnfnsc" path="res://blender/icon.glb" id="1_x5gy7"]
+[ext_resource type="Script" uid="uid://dfwlfmgf61iat" path="res://phone/icon.gd" id="2_aq4x3"]
+[ext_resource type="Material" uid="uid://doymdwtgobvq8" path="res://phone/icon.tres" id="3_jdv3v"]
+[ext_resource type="Texture2D" uid="uid://bfr641ypk6d4o" path="res://phone/shooter/shooter_icon.png" id="3_tcejn"]
+[ext_resource type="Texture2D" uid="uid://bsn787mhlx3n8" path="res://phone/cells/cells_icon.png" id="4_88tq6"]
+[ext_resource type="Texture2D" uid="uid://vu1nswbcebe8" path="res://phone/music/music_icon.png" id="5_rh1s5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x54ru"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_rqyf7"]
+size = Vector2(0.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1s2g"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("4_88tq6")
+disable_receive_shadows = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_v1s2g"]
+size = Vector2(0.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8hei"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("3_tcejn")
+disable_receive_shadows = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_wn25o"]
+size = Vector2(0.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sbqct"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("5_rh1s5")
+disable_receive_shadows = true
+
+[node name="icon" instance=ExtResource("1_x5gy7")]
+script = ExtResource("2_aq4x3")
+
+[node name="icon2" parent="." index="0"]
+surface_material_override/0 = ExtResource("3_jdv3v")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(2.07994, 0, 0, 0, 2.05482, 0, 0, 0, 0.132259, 0, 0, 0)
+shape = SubResource("BoxShape3D_x54ru")
+
+[node name="cells_icon" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(2.06369, 0, 0, 0, 2.04399, 0, 0, 0, 1, 0, 0, 0.00439835)
+visible = false
+mesh = SubResource("QuadMesh_rqyf7")
+surface_material_override/0 = SubResource("StandardMaterial3D_v1s2g")
+
+[node name="Label3D" type="Label3D" parent="cells_icon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.589743, 0)
+text = "Cells"
+
+[node name="shooter_icon" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(2.06369, 0, 0, 0, 2.04399, 0, 0, 0, 1, 0, 0, 0.00439835)
+visible = false
+mesh = SubResource("QuadMesh_v1s2g")
+surface_material_override/0 = SubResource("StandardMaterial3D_j8hei")
+
+[node name="Label3D" type="Label3D" parent="shooter_icon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.589743, 0)
+text = "Shooter"
+
+[node name="music_icon" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(2.06369, 0, 0, 0, 2.04399, 0, 0, 0, 1, 0, 0, 0.00439835)
+visible = false
+mesh = SubResource("QuadMesh_wn25o")
+surface_material_override/0 = SubResource("StandardMaterial3D_sbqct")
+
+[node name="Label3D" type="Label3D" parent="music_icon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.589743, 0)
+text = "Music"
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

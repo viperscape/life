@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x2r7fbo8orkf"
+path="res://.godot/imported/HoliznaCC0 - Tragedy Waiting To Happen.mp3-d5181419ee642ba9474fc4f9683b753b.mp3str"
+
+[deps]
+
+source_file="res://phone/music/songs/HoliznaCC0 - Tragedy Waiting To Happen.mp3"
+dest_files=["res://.godot/imported/HoliznaCC0 - Tragedy Waiting To Happen.mp3-d5181419ee642ba9474fc4f9683b753b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
